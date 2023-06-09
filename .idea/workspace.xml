@@ -4,29 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f245b2-10fc-4278-91a6-d754ed135de4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jbcrypt_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layerd-project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/driver/mysql-connector-java-8.0.30.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jfoenix-8.0.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/security/jbcrypt-0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/Initialize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/CustomerFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/DashboardFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/LoginFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/SignupFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/util/PasswordManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/view/CustomerForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/view/DashboardForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/view/LoginForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/view/SignupForm.fxml" afterDir="false" />
+    <list default="true" id="27f245b2-10fc-4278-91a6-d754ed135de4" name="Changes" comment="create login and register function">
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/ProductMainFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/CrudDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/CrudUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/DaoFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/DatabaseAccessCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/SuperDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/custome/CustomerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/custome/ProductDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/custome/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/custome/impl/CustomerDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/custome/impl/ProductDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/custome/impl/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/db/DbConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dto/CustomerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/entity/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/enums/DaoType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/view/ProductMainForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/view/tm/CustomerTm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/controller/CustomerFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/CustomerFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/controller/DashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/DashboardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/LoginFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/controller/SignupFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/SignupFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/view/CustomerForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/view/CustomerForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +43,8 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="FxmlFile" />
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -107,11 +114,27 @@
       <workItem from="1685074440336" duration="5414000" />
       <workItem from="1685096676306" duration="4844000" />
       <workItem from="1685874280781" duration="13020000" />
-      <workItem from="1685936517872" duration="1426000" />
+      <workItem from="1685936517872" duration="9585000" />
+      <workItem from="1686025656586" duration="18831000" />
+      <workItem from="1686101806866" duration="8605000" />
+      <workItem from="1686186334227" duration="25192000" />
+      <workItem from="1686273203320" duration="11172000" />
     </task>
+    <task id="LOCAL-00001" summary="create login and register function">
+      <created>1685938174404</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685938174405</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create login and register function" />
+    <option name="LAST_COMMIT_MESSAGE" value="create login and register function" />
   </component>
 </project>

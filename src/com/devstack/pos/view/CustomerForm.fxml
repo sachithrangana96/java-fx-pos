@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.devstack.pos.controller.CustomerFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="contextCustomer" prefHeight="545.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.devstack.pos.controller.CustomerFormController">
+   <children>
+      <Label layoutX="49.0" layoutY="25.0" text="Customer Managment">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="352.0" layoutY="23.0" onAction="#btnBackToHomeOnAction" style="-fx-background-color: #95a5a6;" text="Back To Home" textFill="#e4dfdf" />
+      <JFXButton layoutX="496.0" layoutY="23.0" style="-fx-background-color: #2ecc71;" text="Manage Loyalty Cards" textFill="#fcf9f9" />
+      <JFXButton layoutX="681.0" layoutY="23.0" onAction="#btnNewCustomerOnAction" style="-fx-background-color: #3498db;" text="+New Customer" textFill="#f2eaea" />
+      <JFXTextField fx:id="txtEmail" layoutX="49.0" layoutY="118.0" promptText="email" />
+      <JFXTextField fx:id="txtName" layoutX="326.0" layoutY="118.0" promptText="name" />
+      <JFXTextField fx:id="txtContact" layoutX="612.0" layoutY="118.0" promptText="contact" />
+      <JFXTextField fx:id="txtSalary" layoutX="49.0" layoutY="194.0" promptText="salary" />
+      <JFXButton fx:id="btnSave" layoutX="612.0" layoutY="194.0" onAction="#btnSaveUpdateOnAction" prefHeight="31.0" prefWidth="169.0" style="-fx-background-color: #3498db;" text="Save Customer" textFill="#f2eaea" />
+      <TextField fx:id="txtSearch" layoutX="49.0" layoutY="250.0" prefHeight="31.0" prefWidth="731.0" promptText="Search Here" />
+      <TableView fx:id="tbc" layoutX="49.0" layoutY="295.0" prefHeight="200.0" prefWidth="731.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="#" />
+          <TableColumn fx:id="colEmail" prefWidth="114.0" text="email" />
+            <TableColumn fx:id="colName" prefWidth="139.0" text="name" />
+            <TableColumn fx:id="colContact" prefWidth="141.0" text="contact" />
+            <TableColumn fx:id="colSalary" prefWidth="127.0" text="salary" />
+            <TableColumn fx:id="colOperate" prefWidth="131.0" text="Operate" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>
