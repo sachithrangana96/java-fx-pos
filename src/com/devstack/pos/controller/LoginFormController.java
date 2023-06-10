@@ -1,5 +1,6 @@
 package com.devstack.pos.controller;
 
+import com.devstack.pos.bo.custom.impl.UserBoImpl;
 import com.devstack.pos.dao.DatabaseAccessCode;
 import com.devstack.pos.dto.UserDto;
 import com.devstack.pos.util.PasswordManager;
@@ -24,7 +25,7 @@ public class LoginFormController {
 
     public void btnSignInOnAction(ActionEvent actionEvent) {
         try {
-            UserDto dto = new DatabaseAccessCode().findUser(txtEmail.getText());
+            UserDto dto = new UserBoImpl().findUser(txtEmail.getText());
 
             if(dto!=null){
                if(PasswordManager.checkPassword(txtPassword.getText(),dto.getPassword())){

@@ -4,34 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f245b2-10fc-4278-91a6-d754ed135de4" name="Changes" comment="create login and register function">
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/ProductMainFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/CrudDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/CrudUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/DaoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/DatabaseAccessCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/SuperDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/custome/CustomerDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/custome/ProductDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/custome/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/custome/impl/CustomerDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/custome/impl/ProductDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/custome/impl/UserDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/db/DbConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dto/CustomerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/entity/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/enums/DaoType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/view/ProductMainForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/view/tm/CustomerTm.java" afterDir="false" />
+    <list default="true" id="27f245b2-10fc-4278-91a6-d754ed135de4" name="Changes" comment="add dao layer and singleton and factory design pattern">
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/CustomerBo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/ProductBo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/UserBo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/impl/CustomerBoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/impl/ProductBoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/impl/UserBoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dto/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/entity/SuperEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/controller/CustomerFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/CustomerFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/controller/DashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/DashboardFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/LoginFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/controller/ProductMainFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/ProductMainFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/controller/SignupFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/SignupFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/view/CustomerForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/view/CustomerForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/dao/CrudDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/CrudDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/dao/DatabaseAccessCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/DatabaseAccessCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +109,8 @@
       <workItem from="1686025656586" duration="18831000" />
       <workItem from="1686101806866" duration="8605000" />
       <workItem from="1686186334227" duration="25192000" />
-      <workItem from="1686273203320" duration="11172000" />
+      <workItem from="1686273203320" duration="15421000" />
+      <workItem from="1686372143580" duration="4832000" />
     </task>
     <task id="LOCAL-00001" summary="create login and register function">
       <created>1685938174404</created>
@@ -127,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685938174405</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add dao layer and singleton and factory design pattern">
+      <created>1686303905236</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686303905236</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +134,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create login and register function" />
-    <option name="LAST_COMMIT_MESSAGE" value="create login and register function" />
+    <MESSAGE value="add dao layer and singleton and factory design pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dao layer and singleton and factory design pattern" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 package com.devstack.pos.controller;
 
+import com.devstack.pos.bo.custom.impl.CustomerBoImpl;
 import com.devstack.pos.dao.DatabaseAccessCode;
 import com.devstack.pos.dto.CustomerDto;
 import com.devstack.pos.view.tm.CustomerTm;
@@ -80,8 +81,8 @@ public class CustomerFormController {
     private void loadAllCustomers(String searchText) throws SQLException, ClassNotFoundException {
         ObservableList<CustomerTm> observableList = FXCollections.observableArrayList();
         int counter=1;
-        for (CustomerDto dto: searchText.length() >0 ? new DatabaseAccessCode().searchCustomer(searchText) :
-                new DatabaseAccessCode().findAllCustomer()
+        for (CustomerDto dto: searchText.length() >0 ? new CustomerBoImpl().searchCustomer(searchText) :
+                new CustomerBoImpl().findAllCustomer()
         ){
             Button btn = new Button("Delete");
             CustomerTm tm = new CustomerTm(
@@ -98,7 +99,7 @@ public class CustomerFormController {
                     Optional<ButtonType> selectedButtonType = alert.showAndWait();
                     if(selectedButtonType.get().equals(ButtonType.YES)){
                         if(
-                                new DatabaseAccessCode().deleteCustomer(dto.getEmail())
+                                new CustomerBoImpl().deleteCustomer(dto.getEmail())
                         ){
                             new Alert(Alert.AlertType.CONFIRMATION,"Customer Deleted").show();
 
@@ -125,11 +126,13 @@ public class CustomerFormController {
 
             if(btnSave.getText().equals("Save Customer")){
                 if(
-                        new DatabaseAccessCode().createCustomer(
+                        new CustomerBoImpl().saveCustomer(
+                                new CustomerDto(
                                 txtEmail.getText(),
                                 txtName.getText(),
                                 txtContact.getText(),
                                 Double.parseDouble(txtSalary.getText())
+                                )
                         )
                 ){
                     new Alert(Alert.AlertType.CONFIRMATION,"Customer Saved").show();
@@ -140,11 +143,13 @@ public class CustomerFormController {
                 }
             }else{
                 if(
-                        new DatabaseAccessCode().updateCustomer(
+                        new CustomerBoImpl().updateCustomer(
+                                new CustomerDto(
                                 txtEmail.getText(),
                                 txtName.getText(),
                                 txtContact.getText(),
                                 Double.parseDouble(txtSalary.getText())
+                                )
                         )
                 ){
                     new Alert(Alert.AlertType.CONFIRMATION,"Customer Update").show();

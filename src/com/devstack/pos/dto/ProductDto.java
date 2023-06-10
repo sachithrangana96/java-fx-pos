@@ -1,13 +1,13 @@
-package com.devstack.pos.entity;
+package com.devstack.pos.dto;
 
-public class Product implements SuperEntity {
+public class ProductDto {
     private int code;
     private String description;
 
-    public Product() {
+    public ProductDto() {
     }
 
-    public Product(int code, String description) {
+    public ProductDto(int code, String description) {
         this.code = code;
         this.description = description;
     }
@@ -30,7 +30,7 @@ public class Product implements SuperEntity {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "ProductDto{" +
                 "code=" + code +
                 ", description='" + description + '\'' +
                 '}';
