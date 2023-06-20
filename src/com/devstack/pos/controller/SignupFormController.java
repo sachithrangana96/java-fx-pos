@@ -1,8 +1,12 @@
 package com.devstack.pos.controller;
 
+import com.devstack.pos.bo.BoFactory;
+import com.devstack.pos.bo.custom.ProductBo;
+import com.devstack.pos.bo.custom.UserBo;
 import com.devstack.pos.bo.custom.impl.UserBoImpl;
 import com.devstack.pos.dao.DatabaseAccessCode;
 import com.devstack.pos.dto.UserDto;
+import com.devstack.pos.enums.BoType;
 import com.devstack.pos.util.PasswordManager;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -24,11 +28,12 @@ public class SignupFormController {
 
     public AnchorPane contextSignUp;
 
+    UserBo userBo = BoFactory.getInstance().getBo(BoType.USER);
 
     public void btnSignUpOnAction(ActionEvent actionEvent) {
         try {
 
-            if( new UserBoImpl().saveUser(new UserDto(txtEmail.getText(),txtPassword.getText()))){
+            if( userBo.saveUser(new UserDto(txtEmail.getText(),txtPassword.getText()))){
                 new Alert(Alert.AlertType.CONFIRMATION,"User Saved").show();
                 clearField();
             }else {

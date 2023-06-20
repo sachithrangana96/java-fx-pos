@@ -1,8 +1,12 @@
 package com.devstack.pos.controller;
 
+import com.devstack.pos.bo.BoFactory;
+import com.devstack.pos.bo.custom.CustomerBo;
+import com.devstack.pos.bo.custom.UserBo;
 import com.devstack.pos.bo.custom.impl.UserBoImpl;
 import com.devstack.pos.dao.DatabaseAccessCode;
 import com.devstack.pos.dto.UserDto;
+import com.devstack.pos.enums.BoType;
 import com.devstack.pos.util.PasswordManager;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
@@ -22,10 +26,12 @@ public class LoginFormController {
     public JFXButton btnRegisterOnAction;
     public AnchorPane contxtSign;
 
+    UserBo userBo = BoFactory.getInstance().getBo(BoType.USER);
+
 
     public void btnSignInOnAction(ActionEvent actionEvent) {
         try {
-            UserDto dto = new UserBoImpl().findUser(txtEmail.getText());
+            UserDto dto = userBo.findUser(txtEmail.getText());
 
             if(dto!=null){
                if(PasswordManager.checkPassword(txtPassword.getText(),dto.getPassword())){

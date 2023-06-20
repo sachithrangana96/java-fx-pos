@@ -6,9 +6,9 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="694.0" prefWidth="1159.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.devstack.pos.controller.ProductMainFormController">
    <children>
@@ -28,14 +28,15 @@
             </JFXTextField>
             <TextArea fx:id="txtProductDiscription" layoutX="14.0" layoutY="67.0" prefHeight="105.0" prefWidth="410.0" />
             <JFXButton fx:id="btnSaveUpdate" layoutX="305.0" layoutY="189.0" onAction="#btnNewProductOnAction" style="-fx-background-color: #3498db;" text="Save Product" textFill="#f2eaea" />
-            <TableView layoutX="14.0" layoutY="276.0" prefHeight="132.0" prefWidth="410.0">
+            <TableView fx:id="tbp" layoutX="14.0" layoutY="276.0" prefHeight="132.0" prefWidth="410.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="#" />
-                <TableColumn prefWidth="114.0" text="Desc" />
-                  <TableColumn prefWidth="102.0" text="Show More" />
-                  <TableColumn prefWidth="118.0" text="Delete" />
+                <TableColumn fx:id="colProductId" prefWidth="75.0" text="#" />
+                <TableColumn fx:id="colProductDesc" prefWidth="114.0" text="Desc" />
+                  <TableColumn fx:id="colProductShowMore" prefWidth="102.0" text="Show More" />
+                  <TableColumn fx:id="colProductDelete" prefWidth="118.0" text="Delete" />
               </columns>
             </TableView>
+            <TextField fx:id="txtSearch" layoutX="11.0" layoutY="230.0" prefHeight="31.0" prefWidth="410.0" promptText="search hear" />
          </children>
       </AnchorPane>
       <TableView layoutX="502.0" layoutY="317.0" prefHeight="200.0" prefWidth="648.0">
@@ -49,7 +50,8 @@
             <TableColumn prefWidth="126.0" text="Delete" />
         </columns>
       </TableView>
-      <TextArea layoutX="502.0" layoutY="146.0" prefHeight="105.0" prefWidth="410.0" />
-      <JFXButton layoutX="1023.0" layoutY="89.0" style="-fx-background-color: #3498db;" text="+New Batch" textFill="#f2eaea" />
+      <TextArea fx:id="txtSelectedProdDesc" editable="false" layoutX="502.0" layoutY="146.0" prefHeight="105.0" prefWidth="410.0" />
+      <JFXButton layoutX="1023.0" layoutY="89.0" onAction="#btnNewBatchOnAction" style="-fx-background-color: #3498db;" text="+New Batch" textFill="#f2eaea" />
+      <TextField fx:id="txtSelectedProdId" editable="false" layoutX="502.0" layoutY="105.0" prefHeight="31.0" prefWidth="154.0" />
    </children>
 </AnchorPane>

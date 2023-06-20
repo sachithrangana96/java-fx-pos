@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="570.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.devstack.pos.controller.NewBatchFormController">
+   <children>
+      <Label layoutX="52.0" layoutY="44.0" text="Product Managment">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField layoutX="393.0" layoutY="110.0" prefHeight="31.0" prefWidth="306.0" promptText="Qty" />
+      <TextField layoutX="393.0" layoutY="163.0" prefHeight="31.0" prefWidth="306.0" promptText="Selling Price" />
+      <TextField layoutX="397.0" layoutY="225.0" prefHeight="31.0" prefWidth="306.0" promptText="Show Price" />
+      <TextField layoutX="393.0" layoutY="278.0" prefHeight="31.0" prefWidth="306.0" promptText="Buying Price" />
+      <TextField layoutX="52.0" layoutY="374.0" prefHeight="31.0" prefWidth="306.0" promptText="Product Id" />
+      <TextArea layoutX="52.0" layoutY="423.0" prefHeight="124.0" prefWidth="653.0" promptText="Description" />
+      <Label layoutX="397.0" layoutY="329.0" text="Discount %" />
+      <RadioButton layoutX="393.0" layoutY="364.0" mnemonicParsing="false" text="Yes" />
+      <RadioButton layoutX="477.0" layoutY="364.0" mnemonicParsing="false" text="No" />
+      <JFXButton layoutX="564.0" layoutY="374.0" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: blue;" text="Save Batch" textFill="#e4d9d9" />
+      <ImageView fx:id="barcodeImage" fitHeight="176.0" fitWidth="202.0" layoutX="6.0" layoutY="9.0" pickOnBounds="true" />
+   </children>
+</AnchorPane>

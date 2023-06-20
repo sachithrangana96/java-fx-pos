@@ -4,25 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f245b2-10fc-4278-91a6-d754ed135de4" name="Changes" comment="add dao layer and singleton and factory design pattern">
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/CustomerBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/ProductBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/UserBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/impl/CustomerBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/impl/ProductBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/impl/UserBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/dto/ProductDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/entity/SuperEntity.java" afterDir="false" />
+    <list default="true" id="27f245b2-10fc-4278-91a6-d754ed135de4" name="Changes" comment="add business layer">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/apache/commons-codec-1.15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/qr/core-3.5.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/qr/jai-imageio-core-1.4.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/qr/javase-3.5.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/qr/jcommander-1.82.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/BoFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/SuperBo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/NewBatchFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/enums/BoType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/util/QrDataGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/view/NewBatchForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/devstack/pos/view/tm/ProductTm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layerd-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/layerd-project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/CustomerBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/CustomerBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/ProductBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/ProductBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/UserBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/UserBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/impl/ProductBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/bo/custom/impl/ProductBoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/controller/CustomerFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/CustomerFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/LoginFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/controller/ProductMainFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/ProductMainFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/controller/SignupFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/controller/SignupFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/dao/CrudDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/CrudDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/dao/DatabaseAccessCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/dao/DatabaseAccessCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/entity/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devstack/pos/view/ProductMainForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devstack/pos/view/ProductMainForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +39,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="FxmlFile" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -52,25 +58,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/java A to Z/layerd-project/lib/security/jbcrypt-0.2.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/java A to Z/layerd-project/lib/qr/javase-3.5.1.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\java A to Z\layerd-project\lib" />
       <recent name="E:\java A to Z\layerd-project" />
     </key>
   </component>
@@ -110,7 +117,7 @@
       <workItem from="1686101806866" duration="8605000" />
       <workItem from="1686186334227" duration="25192000" />
       <workItem from="1686273203320" duration="15421000" />
-      <workItem from="1686372143580" duration="4832000" />
+      <workItem from="1686372143580" duration="22948000" />
     </task>
     <task id="LOCAL-00001" summary="create login and register function">
       <created>1685938174404</created>
@@ -126,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686303905236</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add business layer">
+      <created>1686379605964</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686379605965</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +149,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create login and register function" />
     <MESSAGE value="add dao layer and singleton and factory design pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dao layer and singleton and factory design pattern" />
+    <MESSAGE value="add business layer" />
+    <option name="LAST_COMMIT_MESSAGE" value="add business layer" />
   </component>
 </project>

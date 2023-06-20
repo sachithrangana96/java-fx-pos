@@ -8,6 +8,7 @@ import com.devstack.pos.entity.Product;
 import com.devstack.pos.enums.DaoType;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductBoImpl implements ProductBo {
@@ -38,8 +39,13 @@ public class ProductBoImpl implements ProductBo {
     }
 
     @Override
-    public List<ProductDto> findAllProduct() {
-        return null;
+    public List<ProductDto> findAllProduct() throws SQLException, ClassNotFoundException {
+
+        List<ProductDto> dto = new ArrayList<>();
+        for(Product p:productDao.findAll()){
+            dto.add(new ProductDto(p.getCode(),p.getDescription()));
+        }
+        return dto;
     }
 
     public  int getLastProductId() throws SQLException, ClassNotFoundException {
